@@ -1,17 +1,19 @@
 class Solution:
     # Part 1
-    def greater_than_previous(self, measurements):
-        res = [int(sub1) < int(sub2) for sub1, sub2 in zip(measurements, measurements[1:])]
+    def greater_than_previous(self, measurements) -> int:
+        res = [int(num1) < int(num2) for num1, num2 in zip(measurements, measurements[1:])]
 
-        print(sum(res))
+        return sum(res)
 
     # Part 2
-    def three_measurement(self, measurements):
-        ans = []
+    def three_measurement(self, measurements) -> int:
+        sum_measurement = []
         for i in range(0, len(measurements)-2):
-            ans.append(measurements[i] + measurements[i + 1] + measurements[i + 2])
+            sum_measurement.append(measurements[i] + measurements[i + 1] + measurements[i + 2])
 
-        self.greater_than_previous(ans)
+        ans = self.greater_than_previous(sum_measurement)
+
+        return ans
 
 
 with open("data.txt") as f:

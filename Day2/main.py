@@ -1,6 +1,6 @@
 class Solution:
     # Part 1
-    def get_pos(self, commands):
+    def get_pos(self, commands) -> int:
         horizontal_pos = 0
         depth = 0
 
@@ -15,10 +15,10 @@ class Solution:
             else:
                 depth -= amount
 
-        print(horizontal_pos * depth)
+        return horizontal_pos * depth
 
     # Part 2
-    def get_pos_aim(self, commands):
+    def get_pos_aim(self, commands) -> int:
         horizontal_pos = 0
         depth = 0
         aim = 0
@@ -35,7 +35,7 @@ class Solution:
             else:
                 aim -= amount
 
-        print(horizontal_pos * depth)
+        return horizontal_pos * depth
 
 
 # Read data from txt and add to list
