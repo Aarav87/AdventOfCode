@@ -28,8 +28,5 @@ class Solution:
 with open("data.txt") as f:
     data = [line.strip() for line in f]
 
-sample_data = ["00100", "11110", "10110", "10111", "10101", "01111", "00111", "11100", "10000", "11001", "00010",
-               "01010"]
-
 if __name__ == "__main__":
     Solution().power_consumption(data)
