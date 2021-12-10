@@ -32,8 +32,11 @@ if __name__ == "__main__":
         # convert every element in list into integer
         data = [int(x) for x in data]
 
+        # create dict with every internal timer (0-8)
         lanternfish = {index: 0 for index in range(9)}
+        # iterate through list of internal timer of fish
         for internal_timer in data:
+            # increase number of internal timer by 1 in dict
             lanternfish[internal_timer] += 1
 
     # part 1
