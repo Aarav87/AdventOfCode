@@ -67,7 +67,7 @@ class Solution:
 
             # reduce the amount of times the cave was visited if it is a small cave
             if cave.islower():
-                self.visited_twice[cave] -= 0
+                self.visited_twice[cave] -= 1
         else:
             # increase number of paths by 1 if it is the end cave
             self.paths[1] += 1
